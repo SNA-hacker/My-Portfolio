@@ -1,0 +1,203 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("bg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Navbar */
+#navbar {
+    background-color: blue;
+    margin: 0;
+    padding: 10px 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+      position: sticky;  
+  top: 0;            
+  z-index: 1000; 
+}
+
+/* Hide button on desktop */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+#nav-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+#nav-logo {
+    font-size: 25px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover , a:visited{
+    color: yellow;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Sections General */
+.All-container {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+    background: transparent;
+}
+#hero{
+      min-height: 100vh;      /* hero takes full screen height */
+    margin: 0;
+     background: rgba(255, 255, 255, 0.85); /* glass effect */
+  backdrop-filter: blur(6px);           /* blur background */
+  box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
+   width: 90%;             /* responsive width */
+    max-width: 700px;       /* keep from growing too large */
+    color: blue;
+    border: 2px solid blue;
+    border-radius: 5px;
+
+    text-align: center;
+    padding: 30px;
+     scroll-margin-top: 100px;
+}
+ #about, #skills, #projects, #contact {
+    width: 90%;             /* responsive width */
+    max-width: 700px;       /* keep from growing too large */
+    color: blue;
+    background-color: white;
+    border: 2px solid blue;
+    border-radius: 5px;
+    opacity: 0.8;
+    text-align: center;
+    padding: 30px;
+     scroll-margin-top: 100px;
+}
+
+
+
+.name {
+    font-size: 40px;
+}
+
+#hero p {
+    line-height: 1.5;
+    font-size: 20px;
+}
+
+#hero img {
+    border-radius: 50%;
+    margin-top: 15px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Projects */
+#projects img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* Footer */
+#foot {
+    background-color: blue;
+    color: white;
+    text-align: center;
+    padding: 8px;
+}
+
+/* ===== Responsive Breakpoints ===== */
+
+/* Tablet */
+@media (max-width: 768px) {
+
+    #navbar {
+        display: flex;
+        flex:start;
+        gap:15px;
+    }
+
+   
+
+    #nav-items li {
+        margin: 10px 0;
+        margin-right:10px;
+    }
+
+    .name {
+        font-size: 32px;
+    }
+
+    #hero p {
+        font-size: 18px;
+   
+  
+    }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+      #nav-items {
+    display: none;              /* hidden by default */
+    flex-direction: column;
+    background-color: blue;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 150px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  #nav-items.show {
+    display: flex;              /* show when toggled */
+  }
+
+  .menu-toggle {
+    display: block;             /* show button only on mobile */
+  }
+    .name {
+        font-size: 28px;
+    }
+
+    #hero p {
+        font-size: 16px;
+       
+    }
+
+    ul li {
+        font-size: 18px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
